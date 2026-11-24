@@ -1,0 +1,18 @@
+{
+  "name": "逍遥游组曲",
+  "short_name": "逍遥",
+  "description": "七乐章五音套曲，依庄子逍遥游篇旨而作",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#c5d4d8",
+  "theme_color": "#c5d4d8",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

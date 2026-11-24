@@ -1,0 +1,29 @@
+{
+  "name": "xiaoyao-suite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "逍遥游组曲 — 七乐章五音套曲。iOS / Android / 手表 / 智能戒指手杖",
+  "scripts": {
+    "build": "node scripts/build-web.js",
+    "start": "npm run build && npx --yes serve www -p 5191",
+    "sync:android": "npm run build && npx cap sync android",
+    "sync:ios": "LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 npm run build && LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 npx cap sync ios",
+    "open:android": "npx cap open android",
+    "open:ios": "npx cap open ios",
+    "apk": "npm run sync:android && cd android && JAVA_HOME=\"${JAVA_HOME_17:-/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home}\" ./gradlew assembleDebug",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/ios": "^6.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0",
+    "esbuild": "^0.24.0"
+  },
+  "allowScripts": {
+    "esbuild@0.24.2": true
+  }
+}

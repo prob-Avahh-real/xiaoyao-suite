@@ -1,0 +1,11 @@
+{
+  "appId": "com.skat.xiaoyaosuite",
+  "appName": "逍遥游组曲",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}
